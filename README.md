@@ -1,8 +1,8 @@
-# sudo-terraform-module-template
+# aws-terraform-module-template
 A foundational template for creating reusable Terraform modules with best practices, pre-configured files, and workflows.
 
 ```plaintext
-sudo-terraform-module-template/
+terraform-module-template/
 ├── .github/
 │   └── workflows/
 │       └── main.yml           # CI/CD workflow for linting and testing Terraform configurations
