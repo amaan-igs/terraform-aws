@@ -1,17 +1,17 @@
 module "ec2_instance" {
   source = "git::https://github.com/amaan-igs/terraform-aws-ec2-instance.git"
 
-  ami_id             = "ami-00bb6a80f01f03502" # Required
-  instance_type      = "t2.micro"             # Optional (default: t2.micro)
-  subnet_id          = "subnet-0194c32a03d44fdbd" # Required
-  security_group_ids = ["sg-07ea31bd8b8dab9f1"] # Required
-  instance_name      = "1-2-instance"     # Required
-  iam_instance_profile = "example-instance-profile" # Optional
-  root_volume_encryption = true # Optional (default: true)
-  enable_imdsv2      = true # Optional (default: true)
-  key_name = "sudo"
+  ami_id                 = "ami-00bb6a80f01f03502"    # Required
+  instance_type          = "t2.micro"                 # Optional (default: t2.micro)
+  subnet_id              = "subnet-0194c32a03d44fdbd" # Required
+  security_group_ids     = ["sg-07ea31bd8b8dab9f1"]   # Required
+  instance_name          = "1-2-instance"             # Required
+#   iam_instance_profile   = "data-engineer" # Optional
+  root_volume_encryption = true                       # Optional (default: true)
+  enable_imdsv2          = true                       # Optional (default: true)
+  key_name               = "sudo"
 
- ebs_volumes = [ 
+  ebs_volumes = [
     {
       device_name = "/dev/xvdf"
       volume_size = 20
@@ -20,10 +20,9 @@ module "ec2_instance" {
     }
   ]
 
-
   tags = {
-    Environment = "dev"                       # Optional
-    Project     = "sudo-project"           # Optional
+    Environment = "dev"          # Optional
+    Project     = "sudo-project" # Optional
   }
 }
 

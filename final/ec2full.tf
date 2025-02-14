@@ -5,7 +5,7 @@ module "ec2_instance" {
   instance_type         = "t2.micro"
   subnet_id             = "subnet-0194c32a03d44fdbd"
   security_group_ids    = ["sg-07ea31bd8b8dab9f1"]
-  instance_name         = "prod-wayz"
+  instance_name         = "demo-sudo-friday"
   key_name              = "sudo"
   iam_instance_profile  = "instance-profile-igs" 
   root_volume_size      = 9  
